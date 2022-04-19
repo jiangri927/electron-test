@@ -19,7 +19,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "NODE_ENV=development electron .",
     "build": "react-scripts build",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
