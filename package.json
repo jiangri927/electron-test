@@ -3,6 +3,8 @@
   "name": "electron-test",
   "version": "0.1.0",
   "private": true,
+  "description": "Electron app auto updater",
+  "main": "main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -21,7 +23,23 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "release": "electron-builder --windows --linux --publish always"
+  },
+  "build": {
+    "appId": "com.electron.autoupdater",
+    "productName": "ElectronAutoUpdates",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "type": "distribution"
+    },
+    "linux": {
+        "target": ["AppImage"],
+        "category": "Office"
+    },
+    "publish": {
+      "provider": "github"
+    }
   },
   "eslintConfig": {
     "extends": [
