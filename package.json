@@ -19,11 +19,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "react-scripts build",
+    "start": "NODE_ENV=development electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
-    "release": "electron-builder --windows --linux --publish always"
+    "release": "electron-builder --windows --linux --publish always",
+    "build":"react-script build"
   },
   "build": {
     "appId": "com.electron.autoupdater",
